@@ -5,3 +5,8 @@ services:
     container_name: bookshop
     ports:
       - "80:8080"
+  oracle-db:
+    image: kimaudwns/db:v1
+    container_name: oracle-db
+    ports:
+      - "1521:1521"
