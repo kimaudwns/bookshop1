@@ -60,7 +60,7 @@ pipeline {
         stage('Docker Image Push') {
             steps {
                 echo 'Docker Image Push'  
-                sh "docker push kimaudwns/bookshop:latest"  // Docker 이미지 푸시
+                sh "docker push kimaudwns/bookshop1:latest"  // Docker 이미지 푸시
             }
         }
         
