@@ -45,6 +45,7 @@ pipeline {
                     sh """
                     docker build -t kimaudwns/bookshop:$BUILD_NUMBER .
                     docker tag kimaudwns/bookshop:$BUILD_NUMBER kimaudwns/bookshop:latest
+                    
                     """
                 }
             }
