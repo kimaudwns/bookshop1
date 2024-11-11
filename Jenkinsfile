@@ -94,5 +94,10 @@ pipeline {
                 }
            }
         }
-    }
+        stage('Setup Namespace') {
+        steps {
+        sh 'kubectl create namespace team5-bookshop || echo "Namespace already exists"'
+        }
+    } 
+  }
 }
