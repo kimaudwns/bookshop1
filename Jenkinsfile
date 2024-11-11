@@ -83,7 +83,7 @@ pipeline {
                   dir("${env.WORKSPACE}"){
                   sh '''
                   export PATH=$PATH:/usr/bin
-                  kubectl set image deployment/spring-petclinic spring-petclinic=:$BUILD_NUMBER -n spring-petclinic --record
+                  kubectl set image deployment/spring-petclinic spring-petclinic=kimaudwns/bookshop:$BUILD_NUMBER -n spring-petclinic --record
                   '''
                     } 
                 }
