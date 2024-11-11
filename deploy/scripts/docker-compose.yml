@@ -10,4 +10,4 @@ services:
     container_name: oracle-db
     ports:
       - "1521:1521"
-      - "5000:5000"
+      - "5500:5500"
