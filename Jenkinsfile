@@ -86,7 +86,7 @@ pipeline {
                   kubectl set image deployment/spring-petclinic spring-petclinic=kimaudwns/bookshop:$BUILD_NUMBER -n team5-bookshop
                   '''
                  sh '''
-                 kubectl set image statefulset/oracle-team5 oracle-team5-xe=kimaudwns/oracle-db:$BUILD_NUMBER -n database
+                 kubectl set image statefulset/spring-petclinic oracle-team5-xe=kimaudwns/oracle-db:$BUILD_NUMBER -n database
                  '''
 
                       
