@@ -86,11 +86,7 @@ pipeline {
                   export PATH=$PATH:/usr/bin
                   kubectl set image deployment/spring-petclinic spring-petclinic=kimaudwns/bookshop:latest -n database
                   '''
-                 sh '''
-                 kubectl set image statefulset/oracle-21-xe oracle-db=kimaudwns/db:v1 -n database
-                 '''
-
-                      
+                                 
                     } 
                 }
            }
