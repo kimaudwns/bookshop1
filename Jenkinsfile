@@ -84,17 +84,11 @@ pipeline {
                   dir("${env.WORKSPACE}"){
                   sh '''
                   export PATH=$PATH:/usr/bin
-                  kubectl set image deployment/spring-petclinic spring-petclinic=kimaudwns/bookshop:latest -n database
+                  kubectl set image deployment/bookshop bookshop=kimaudwns/bookshop:latest -n database
                   '''
-                                 
-                    } 
-                }
-           }
-        }
-        stage('Setup Namespace') {
-        steps {
-        sh 'kubectl create namespace team5-bookshop || echo "Namespace already exists"'
-        }
-    } 
+                  }                   
+            } 
+       }
+     }    
   }
 }
