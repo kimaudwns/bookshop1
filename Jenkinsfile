@@ -84,7 +84,7 @@ pipeline {
                   dir("${env.WORKSPACE}"){
                   sh '''
                   export PATH=$PATH:/usr/bin
-                  kubectl set image deployment/bookshop bookshop=kimaudwns/bookshop:$BUILD_NUMBER -n database
+                  kubectl set image deployment/bookshop bookshop=kimaudwns/bookshop:latest -n database
                   '''
                   }                   
             } 
