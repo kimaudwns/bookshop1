@@ -61,7 +61,7 @@ pipeline {
         stage('Docker Image Push') {
             steps {
                 echo 'Docker Image Push'  
-                sh "docker push kimaudwns/bookshop:latest"  // Docker 이미지 푸시
+                sh "docker push kimaudwns/opbookshop:latest"  // Docker 이미지 푸시
             }
         }
         
@@ -70,7 +70,7 @@ pipeline {
                 // Jenkins 서버의 사용하지 않는 Docker 이미지 제거
                 echo 'Cleaning up unused Docker images on Jenkins server'
                 sh """
-                docker rmi kimaudwns/bookshop:$BUILD_NUMBER
+                docker rmi kimaudwns/opbookshop:$BUILD_NUMBER
                 """
                 //docker rmi kimaudwns/bookshop:latest
                 //"""
@@ -84,7 +84,7 @@ pipeline {
                   dir("${env.WORKSPACE}"){
                   sh '''
                   export PATH=$PATH:/usr/bin
-                  kubectl set image deployment/bookshop bookshop=kimaudwns/bookshop:latest -n database
+                  kubectl set image deployment/bookshop bookshop=kimaudwns/opbookshop:latest -n database
                   '''
                   }                   
             } 
