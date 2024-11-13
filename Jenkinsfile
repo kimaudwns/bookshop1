@@ -44,7 +44,7 @@ pipeline {
                 dir("${env.WORKSPACE}") {
                     sh """
                     docker build -t kimaudwns/opbookshop:$BUILD_NUMBER .
-                    docker tag kimaudwns/opbookshop:$BUILD_NUMBER kimaudwns/bookshop:latest
+                    docker tag kimaudwns/opbookshop:$BUILD_NUMBER kimaudwns/opbookshop:latest
                     
                     """
                 }
