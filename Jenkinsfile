@@ -7,8 +7,6 @@ pipeline {
     }
     environment { 
         DOCKERHUB_CREDENTIALS = credentials('dockerCredentials')  // Docker Hub 자격 증명 ID
-        REGION = "ap-northeast-2"  // AWS 리전
-        AWS_CREDENTIAL_NAME = 'AWSCredentials'  // AWS 자격 증명 ID
     }
 
     stages {
