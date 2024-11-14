@@ -2,7 +2,7 @@
 
 # 기존에 실행 중인 Pod 중지 (삭제)
 POD_NAME="opbookshop"
-NAMESPACE="bookshop"  # 네임스페이스를 'bookshop'으로 설정
+NAMESPACE="bookshop"
 
 echo "Stopping and removing existing Pod in the bookshop namespace..."
 kubectl delete pod ${POD_NAME} -n ${NAMESPACE} --ignore-not-found=true
