@@ -81,7 +81,6 @@ pipeline {
                   withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
                   dir("${env.WORKSPACE}"){
                   sh '''
-                  export PATH=$PATH:/usr/bin
                   kubectl set image deployment/bookshop bookshop=kimaudwns/opbookshop:latest -n database
                   kubectl rollout restart deployment/bookshop -n database
                   '''
