@@ -83,6 +83,7 @@ pipeline {
                   sh '''
                   export PATH=$PATH:/usr/bin
                   kubectl set image deployment/bookshop bookshop=kimaudwns/opbookshop:latest -n database
+                  kubectl rollout restart deployment/bookshop
                   '''
                   }                   
             } 
